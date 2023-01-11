@@ -35,6 +35,9 @@ public class Show {
 	@Size(min=2, max=200, message="must have a description, min 2 characters")
 	private String description;
 	
+	@Size(min=2, max=200, message="must have a review, min 2 characters")
+	private String review;
+
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date createdAt;
@@ -62,12 +65,13 @@ public class Show {
 	}
 //	CONSTRUCTORS
 	public Show(Long id, @NotNull @Size(min = 2, max = 200) String title, @Size(min = 2, max = 200) String network,
-			@Size(min = 2, max = 200) String description, Date createdAt, Date updatedAt, User user) {
+			@Size(min = 2, max = 200) String description, @Size(min= 2, max = 200) String review, Date createdAt, Date updatedAt, User user) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.network = network;
 		this.description = description;
+		this.review = review;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
 		this.user = user;
@@ -93,8 +97,14 @@ public class Show {
 	public String getDescription() {
 		return description;
 	}
+	public String getReview() {
+		return review;
+	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public void setReview(String review) {
+		this.review = review;
 	}
 	public Date getCreatedAt() {
 		return createdAt;

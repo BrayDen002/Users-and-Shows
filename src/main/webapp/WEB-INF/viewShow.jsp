@@ -27,6 +27,7 @@
 		<h2>Posted by: <c:out value="${shows.user.full_name} " /></h2>
 		<h2>Network: <c:out value="${shows.network} " /></h2>
 		<h2>Description: <c:out value="${shows.description} " /></h2>
+		<h2>Review: <c:out value="${shows.review} " /></h2>
 	</div>
 	<a href="/shows/${shows.id}/edit">edit</a>
 </body>

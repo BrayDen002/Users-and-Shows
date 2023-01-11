@@ -44,6 +44,11 @@
 				<form:input path="description" />
 				<form:errors path="description" />
 			</div>
+			<div class="form-group row">	
+				<form:label path="review" type="text">Review</form:label>
+				<form:input path="review" />
+				<form:errors path="review" />
+			</div>
 			<a href="/home">Cancel</a>
 			<input type="submit" value="Submit" class="btn btn-primary" />
 			
